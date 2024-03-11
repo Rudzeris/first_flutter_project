@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -111,8 +109,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 Column(
                   children: [
                     ClipOval(
-                      child: Image.network(
-                          'https://imgix.bustle.com/uploads/image/2020/10/1/68e268c3-8588-401b-9bdc-b19728802b7b-screen-shot-2020-10-01-at-103609-am.png',
+                      child: Image.asset(
+                          'assets/images/steve_1.jpeg',
                           width: 200,
                           height: 200,
                           fit: BoxFit.cover
