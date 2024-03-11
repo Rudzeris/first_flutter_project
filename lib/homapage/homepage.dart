@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           label: Text('ID'),
                         ),
                         if(vkClick)
-                          Text('  8(800) 555-35-35'),
+                          Text('  8(800)555-35-35'),
                       ],
                     ),
                     Padding(
