@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/UI/styles/mainTheme.dart';
 import 'package:flutter_project/homapage/homepage.dart';
+import 'package:flutter_project/homapage/shop.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -8,11 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter4ik',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(
+      theme: mainTheme,
+      home: const MyShopPage(
           title: 'My profile'),
     );
   }
