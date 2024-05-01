@@ -1,8 +1,11 @@
 import 'dart:html';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project/UI/styles/colors.dart';
+import 'package:flutter_project/fnc/LangvButton.dart';
+import 'package:flutter_project/generated/locale_keys.g.dart';
 
 import '../UI/styles/mainTheme.dart';
 class MyShopPage extends StatefulWidget {
@@ -28,9 +31,24 @@ class _MyShopPageState extends State<MyShopPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Center(child: Text("(о_о )",style: mainTheme.textTheme.displayLarge)),
+                  Row(
+                    children: [
+                      LangvButton(butFnx:(){
+                        if(context.locale == const Locale("ru"))
+                        {
+                          context.setLocale(const Locale("en"));
+                        }
+                        else{
+                          context.setLocale(const Locale("ru"));
+                        }
+                      }),
+                      Expanded(child: Container()),
+                      Center(child: Text(LocaleKeys.author.tr(),style: mainTheme.textTheme.displayLarge)),
+                      Expanded(child: Container()),
+                    ],
+                  ),
                   SizedBox(height: 32),
-                  Text("+78005553535",style: mainTheme.textTheme.labelSmall),
+                  Text("#PHONE",style: mainTheme.textTheme.labelSmall),
                   SizedBox(height: 40),
                   Row(
                     children: [
@@ -42,9 +60,9 @@ class _MyShopPageState extends State<MyShopPage> {
                           child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Мои бонусы",style: mainTheme.textTheme.titleSmall),
-                            Text("700.2",style: mainTheme.textTheme.titleLarge),
-                            Text("Подробнее",style: mainTheme.textTheme.titleMedium),
+                            Text(LocaleKeys.my_bonus.tr(),style: mainTheme.textTheme.titleSmall),
+                            Text("#BALANCE",style: mainTheme.textTheme.titleLarge),
+                            Text(LocaleKeys.more_detail.tr(),style: mainTheme.textTheme.titleMedium),
                             ],
                           ),
                         ),),
@@ -54,19 +72,21 @@ class _MyShopPageState extends State<MyShopPage> {
                   SizedBox(height:defpad),
                   Row(children:[
                     Expanded(child:ElevatedButton(onPressed: (){}, child: Padding(
-                        padding: const EdgeInsets.all(12.0), child:Text("Приведи друга - получи леща",style: mainTheme.textTheme.headlineSmall)))
+                        padding: const EdgeInsets.all(12.0),
+                        child:Text(LocaleKeys.invite_button.tr(),
+                            style: mainTheme.textTheme.headlineSmall)))
                     )
                   ]),
                   SizedBox(height:defpad),
-                  Center(child:Text("Покажи штрихкод кассиру для начисления бонусов при оплате",style: mainTheme.textTheme.labelSmall)),
+                  Center(child:Text(LocaleKeys.invite_text.tr(),style: mainTheme.textTheme.labelSmall)),
                   SizedBox(height:5),
-                  Center(child:Image.asset("barcode.jpeg")),
+                  Center(child:Text("#BARCODE",style: TextStyle(fontSize: 40))),
                   SizedBox(height: defpad),
                   Column(
                     children: [
-                      Text("Мои заказы",style: mainTheme.textTheme.headlineMedium),
+                      Text(LocaleKeys.my_order.tr(),style: mainTheme.textTheme.headlineMedium),
                       SizedBox(height:defpad),
-                      Text("Мои адреса",style: mainTheme.textTheme.headlineMedium)
+                      Text(LocaleKeys.my_address,style: mainTheme.textTheme.headlineMedium)
                     ],
                   ),
                   SizedBox(height:defpad),
@@ -80,10 +100,10 @@ class _MyShopPageState extends State<MyShopPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(children:[Icon(Icons.restaurant_menu,color: mainGr),Text("Меню",style: mainTheme.textTheme.labelSmall),],),
-                Column(children:[Icon(Icons.person),Text("Профиль",style: mainTheme.textTheme.labelSmall),],),
-                Column(children:[Icon(Icons.phone),Text("Контакты",style: mainTheme.textTheme.labelSmall),],),
-                Column(children:[Icon(Icons.local_pizza_outlined),Text("Корзина",style: mainTheme.textTheme.labelSmall),],),
+                Column(children:[Icon(Icons.restaurant_menu,color: mainGr),Text(LocaleKeys.menu.tr(),style: mainTheme.textTheme.labelSmall),],),
+                Column(children:[Icon(Icons.person),Text(LocaleKeys.profile.tr(),style: mainTheme.textTheme.labelSmall),],),
+                Column(children:[Icon(Icons.phone),Text(LocaleKeys.contact.tr(),style: mainTheme.textTheme.labelSmall),],),
+                Column(children:[Icon(Icons.local_pizza_outlined),Text(LocaleKeys.cart.tr(),style: mainTheme.textTheme.labelSmall),],),
               ]
             )
           )
