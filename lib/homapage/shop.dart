@@ -1,6 +1,8 @@
 import 'dart:html';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_project/UI/styles/colors.dart';
 
 import '../UI/styles/mainTheme.dart';
 class MyShopPage extends StatefulWidget {
@@ -56,15 +58,15 @@ class _MyShopPageState extends State<MyShopPage> {
                     )
                   ]),
                   SizedBox(height:defpad),
-                  Center(child:Text("Покажи штрихкод кассиру для начисления бонусов при оплате")),
+                  Center(child:Text("Покажи штрихкод кассиру для начисления бонусов при оплате",style: mainTheme.textTheme.labelSmall)),
                   SizedBox(height:5),
-                  Center(child:Icon(Icons.bar_chart,size:80)),
+                  Center(child:Image.asset("barcode.jpeg")),
                   SizedBox(height: defpad),
                   Column(
                     children: [
-                      Text("Мои заказы"),
+                      Text("Мои заказы",style: mainTheme.textTheme.headlineMedium),
                       SizedBox(height:defpad),
-                      Text("Мои адреса")
+                      Text("Мои адреса",style: mainTheme.textTheme.headlineMedium)
                     ],
                   ),
                   SizedBox(height:defpad),
@@ -72,17 +74,16 @@ class _MyShopPageState extends State<MyShopPage> {
                 ],
               ),
             ),
-
           Container(decoration: BoxDecoration(), child: Padding(
             padding: const EdgeInsets.only(left:32,top: 10, bottom: 10, right: 32),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(children:[Icon(Icons.restaurant_menu),Text("Меню"),],),
-                Column(children:[Icon(Icons.person),Text("Профиль"),],),
-                Column(children:[Icon(Icons.phone),Text("Контакты"),],),
-                Column(children:[Icon(Icons.local_pizza_outlined),Text("Корзина"),],),
+                Column(children:[Icon(Icons.restaurant_menu,color: mainGr),Text("Меню",style: mainTheme.textTheme.labelSmall),],),
+                Column(children:[Icon(Icons.person),Text("Профиль",style: mainTheme.textTheme.labelSmall),],),
+                Column(children:[Icon(Icons.phone),Text("Контакты",style: mainTheme.textTheme.labelSmall),],),
+                Column(children:[Icon(Icons.local_pizza_outlined),Text("Корзина",style: mainTheme.textTheme.labelSmall),],),
               ]
             )
           )

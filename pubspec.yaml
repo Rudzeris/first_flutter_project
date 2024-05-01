@@ -65,6 +65,7 @@ flutter:
   assets: # Эти три штуки раскомментировали
     - assets/images/Котик_1.jpeg
     - assets/images/steve_1.jpeg
+    - assets/barcode.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
