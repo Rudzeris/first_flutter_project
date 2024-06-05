@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../UI/styles/mainTheme.dart';
+import '../fnc/LangvButton.dart';
 import '../generated/locale_keys.g.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -85,6 +86,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Row(
+              children: [
+                LangvButton(butFnx:(){
+                  if(context.locale == const Locale("ru"))
+                  {
+                    context.setLocale(const Locale("en"));
+                  }
+                  else{
+                    context.setLocale(const Locale("ru"));
+                  }
+                }),
+              ],
+            ),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -158,17 +172,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: mainTheme.textTheme.labelMedium),
             Padding(padding: EdgeInsets.all(18.0)),
             Text(_selectedDate == null
-                ? 'Угадайте дату рождения'
-                : 'Вы выбрали дату: ${_selectedDate!.year}/${_selectedDate!.month}/${_selectedDate!.day}' +
-                    (_selectedDate!.year.toInt() == 2001 &&
-                            _selectedDate!.month.toInt() == 7 &&
-                            _selectedDate!.day.toInt() == 23
-                        ? ' и угадали(._. ) \"Как?\"'
-                        : ' и не угадали (23.07.2001)'), style: mainTheme.textTheme.labelMedium),
+                ? LocaleKeys.my_date
+                : LocaleKeys.select_a_date.tr()+': ${_selectedDate!.year}/${_selectedDate!.month}/${_selectedDate!.day}'),
             Padding(padding: EdgeInsets.all(8.0)),
             ElevatedButton(
               onPressed: () => _selectDate(context),
-              child: Text('Выбрать дату',style: mainTheme.textTheme.labelMedium),
+              child: Text(LocaleKeys.select_a_date.tr(),style: mainTheme.textTheme.labelMedium),
             ),
           ],
         ),

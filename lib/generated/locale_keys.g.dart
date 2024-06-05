@@ -15,6 +15,7 @@ abstract class  LocaleKeys {
   static const my_name = 'my_name';
   static const omne = 'omne';
   static const my_date = 'my_date';
+  static const select_a_date = 'select_a_date';
   static const subscribes = 'subscribes';
   static const subscribe = 'subscribe';
   static const unsubscribe = 'unsubscribe';
