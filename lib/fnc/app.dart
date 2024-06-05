@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
       title: 'Flutter4ik',
       theme: mainTheme,
-      home: const MyShopPage(
+      home: const MyHomePage(
           title: 'My profile'),
     );
   }

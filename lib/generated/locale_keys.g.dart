@@ -12,5 +12,9 @@ abstract class  LocaleKeys {
   static const profile = 'profile';
   static const contact = 'contact';
   static const cart = 'cart';
+  static const my_name = 'my_name';
+  static const omne = 'omne';
+  static const my_date = 'my_date';
+  static const subs = 'subs';
 
 }

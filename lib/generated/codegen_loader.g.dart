@@ -16,7 +16,7 @@ class CodegenLoader extends AssetLoader{
 
   static const Map<String,dynamic> en = {
   "author": "( o_o)/",
-  "invite_button": "Приведи друга - получи bream",
+  "invite_button": "Click to sell a friend",
   "my_bonus": "My bonuses",
   "more_detail": "More details",
   "invite_text": "Show the barcode to the cashier to add bonuses when paying",
@@ -25,7 +25,11 @@ class CodegenLoader extends AssetLoader{
   "menu": "Menu",
   "profile": "Profile",
   "contact": "Contacts",
-  "cart": "Cart"
+  "cart": "Cart",
+  "my_name": "Atangulov Ruzil Rishatovich",
+  "omne": "My inf: Ogur4ik",
+  "my_date": "Ygadai birth date",
+  "subs": "Subscribers"
 };
 static const Map<String,dynamic> ru = {
   "author": "\\(o_o )",
@@ -38,7 +42,11 @@ static const Map<String,dynamic> ru = {
   "menu": "Меню",
   "profile": "Профиль",
   "contact": "Контакты",
-  "cart": "Корзина"
+  "cart": "Корзина",
+  "my_name": "Атангулов Рузиль Ришатович",
+  "omne": "Обо мне: Огурчик",
+  "my_date": "Угадайте дату рождения",
+  "subs": "Подписчики"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ru": ru};
 }

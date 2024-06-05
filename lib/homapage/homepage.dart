@@ -1,4 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+
+import '../UI/styles/mainTheme.dart';
+import '../fnc/LangvButton.dart';
+import '../generated/locale_keys.g.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -68,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+
       appBar: AppBar(
 
         backgroundColor: Theme.of(context).colorScheme.background.withBlue(40).withGreen(150).withRed(100),
@@ -80,7 +86,15 @@ class _MyHomePageState extends State<MyHomePage> {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
+            LangvButton(butFnx:(){
+              if(context.locale == const Locale("ru"))
+              {
+                context.setLocale(const Locale("en"));
+              }
+              else{
+                context.setLocale(const Locale("ru"));
+              }
+            }),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -95,13 +109,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Text(
-                      'Атангулов Рузиль Ришатович',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.deepPurple,
-                      ),
+                      LocaleKeys.my_name.tr(),style: mainTheme.textTheme.titleMedium
+
                     ),
                   ],
                 ),
@@ -158,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Row(
                       children:[
                         Text(
-                          'Подписчиков: ',
+                          LocaleKeys.subs.tr()+': ',
                           style: TextStyle(
                             fontSize: 14,
                             color: Colors.grey,
@@ -181,8 +190,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.all(18.0)
             ),
 
-            defaultText('Обо мне: боролся 3 часа с Android Studio и Flutter -> выжат как огурец'),
 
+          Text(
+              LocaleKeys.omne.tr(),style: mainTheme.textTheme.displayMedium
+          ),
             Padding(
                 padding: EdgeInsets.all(18.0)
             ),
