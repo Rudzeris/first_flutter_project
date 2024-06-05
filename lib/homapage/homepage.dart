@@ -173,16 +173,11 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(padding: EdgeInsets.all(18.0)),
             Text(_selectedDate == null
                 ? LocaleKeys.my_date
-                : LocaleKeys.select_a_date.tr()+': ${_selectedDate!.year}/${_selectedDate!.month}/${_selectedDate!.day}' +
-                    (_selectedDate!.year.toInt() == 2001 &&
-                            _selectedDate!.month.toInt() == 7 &&
-                            _selectedDate!.day.toInt() == 23
-                        ? ' и угадали(._. ) \"Как?\"'
-                        : ' и не угадали (23.07.2001)'), style: mainTheme.textTheme.labelMedium),
+                : LocaleKeys.select_a_date.tr()+': ${_selectedDate!.year}/${_selectedDate!.month}/${_selectedDate!.day}'),
             Padding(padding: EdgeInsets.all(8.0)),
             ElevatedButton(
               onPressed: () => _selectDate(context),
-              child: Text('Выбрать дату',style: mainTheme.textTheme.labelMedium),
+              child: Text(LocaleKeys.select_a_date.tr(),style: mainTheme.textTheme.labelMedium),
             ),
           ],
         ),
