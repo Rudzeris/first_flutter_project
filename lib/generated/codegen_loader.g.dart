@@ -27,9 +27,12 @@ class CodegenLoader extends AssetLoader{
   "contact": "Contacts",
   "cart": "Cart",
   "my_name": "Atangulov Ruzil Rishatovich",
-  "omne": "My inf: Ogur4ik",
+  "omne": "My inf",
   "my_date": "Ygadai birth date",
-  "subs": "Subscribers"
+  "subscribes": "Subscribes",
+  "subscribe": "Subscribe",
+  "unsubscribe": "Unsubscribe",
+  "wallet": "Wallet"
 };
 static const Map<String,dynamic> ru = {
   "author": "\\(o_o )",
@@ -44,9 +47,12 @@ static const Map<String,dynamic> ru = {
   "contact": "Контакты",
   "cart": "Корзина",
   "my_name": "Атангулов Рузиль Ришатович",
-  "omne": "Обо мне: Огурчик",
+  "omne": "Обо мне",
   "my_date": "Угадайте дату рождения",
-  "subs": "Подписчики"
+  "subscribes": "Подписчики",
+  "subscribe": "Подписаться",
+  "unsubscribe": "Отписаться",
+  "wallet": "Кошелек"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ru": ru};
 }

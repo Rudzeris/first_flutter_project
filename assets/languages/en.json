@@ -11,7 +11,10 @@
   "contact" : "Contacts",
   "cart" : "Cart",
   "my_name" : "Atangulov Ruzil Rishatovich",
-  "omne" : "My inf: Ogur4ik",
+  "omne" : "My inf",
   "my_date" : "Ygadai birth date",
-  "subs" : "Subscribers"
+  "subscribes" : "Subscribes",
+  "subscribe" : "Subscribe",
+  "unsubscribe" : "Unsubscribe",
+  "wallet" : "Wallet"
 }
