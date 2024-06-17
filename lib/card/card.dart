@@ -5,19 +5,17 @@ import 'package:flutter/material.dart';
 import '../UI/styles/mainTheme.dart';
 import '../fnc/LangvButton.dart';
 import '../generated/locale_keys.g.dart';
-import '../router/router.dart';
 
 @RoutePage()
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyCardScreen extends StatefulWidget {
+  const MyCardScreen({super.key});
 
-  final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyCardScreen> createState() => _MyCardScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyCardScreenState extends State<MyCardScreen> {
   
   int _counter = 0;
   bool vkClick = false;
